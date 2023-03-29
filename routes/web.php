@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TutorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,13 +30,13 @@ Route::middleware('auth')->group(function () {
 });
 
 // Tutores
-Route::get('/tutores', 'TutorController@index');
-Route::get('/tutores/create', 'TutorController@create');
-Route::post('/tutores', 'TutorController@store');
-Route::get('/tutores/{id}', 'TutorController@show');
-Route::get('/tutores/{id}/edit', 'TutorController@edit');
-Route::put('/tutores/{id}', 'TutorController@update');
-Route::delete('/tutores/{id}', 'TutorController@destroy');
+Route::get('/tutores', [TutorController::class, 'index']);
+Route::get('/tutores/create', [TutorController::class, 'create']);
+Route::post('/tutores', [TutorController::class, 'store']);
+Route::get('/tutores/{id}', [TutorController::class, 'show']);
+Route::get('/tutores/{id}/edit', [TutorController::class, 'edit']);
+Route::put('/tutores/{id}', [TutorController::class, 'update']);
+Route::delete('/tutores/{id}', [TutorController::class, 'destroy']);
 
 
 require __DIR__.'/auth.php';

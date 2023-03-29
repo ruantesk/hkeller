@@ -12,8 +12,8 @@ class TutorController extends Controller
      */
     public function index()
     {
-        $tutors = Tutor::all();
-        return view('tutors.index', ['tutors' => $tutors]);
+        $tutores = Tutor::all();
+        return view('tutor.index', ['tutores' => $tutores]);
     }
 
     /**
@@ -21,7 +21,7 @@ class TutorController extends Controller
      */
     public function create()
     {
-        return view('tutors.create');
+        return view('tutor.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class TutorController extends Controller
 
         Tutor::create($validatedData);
 
-        return redirect()->route('tutors.index')
+        return redirect()->route('tutor.index')
             ->with('success', 'Tutor criado com sucesso.');
     }
 
@@ -48,7 +48,7 @@ class TutorController extends Controller
     public function show(string $id)
     {
         $tutor = Tutor::findOrFail($id);
-        return view('tutors.show', compact('tutor'));
+        return view('tutor.show', compact('tutor'));
     }
 
     /**
@@ -57,7 +57,7 @@ class TutorController extends Controller
     public function edit(string $id)
     {
         $tutor = Tutor::findOrFail($id);
-        return view('tutors.edit', compact('tutor'));
+        return view('tutor.edit', compact('tutor'));
     }
 
     /**
@@ -74,7 +74,7 @@ class TutorController extends Controller
 
         Tutor::whereId($id)->update($validatedData);
 
-        return redirect()->route('tutors.index')
+        return redirect()->route('tutor.index')
             ->with('success', 'Tutor atualizado com sucesso.');
     }
 
@@ -86,7 +86,7 @@ class TutorController extends Controller
         $tutor = Tutor::findOrFail($id);
         $tutor->delete();
 
-        return redirect()->route('tutors.index')
+        return redirect()->route('tutor.index')
             ->with('success', 'Tutor deletado com sucesso.');
     }
 }
