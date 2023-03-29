@@ -58,7 +58,7 @@
             @if (Route::has('login'))
                 <div class="center-screen w-full sm:max-w-md mt-6 px-6 py-4 shadow-md overflow-hidden sm:rounded-lg">
                     <div>
-                    <img class="sm:rounded-lg"" src="https://caoguia.org.br/wp-content/uploads/2022/07/LOGO-HELLEN-KELLER-22-Anos-e-INTERNATIONAL-GUIDE-DOG-FEDERATION.png">
+                    <img class="sm:rounded-lg" src="https://caoguia.org.br/wp-content/uploads/2022/07/LOGO-HELLEN-KELLER-22-Anos-e-INTERNATIONAL-GUIDE-DOG-FEDERATION.png">
                     </div>
                     <div class="acess">
                     @auth
@@ -72,7 +72,7 @@
                     @endauth
                     </div>
                     <div class="social-media">
-                        <a href="https://www.instagram.com/caoguia.org.br/"><img src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c521.png" style="width:30px;height:30px;" alt="Instagram"></a>
+                        <a href="https://www.instagram.com/caoguia.org.br/"><img src="{{ asset('images/insta.png') }}" style="width:30px;height:30px;" alt="Instagram"></a>
                     </div>
                 </div>
             @endif
