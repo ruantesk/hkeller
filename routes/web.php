@@ -30,13 +30,13 @@ Route::middleware('auth')->group(function () {
 });
 
 // Tutores
-Route::get('/tutores', [TutorController::class, 'index']);
-Route::get('/tutores/create', [TutorController::class, 'create']);
-Route::post('/tutores', [TutorController::class, 'store']);
-Route::get('/tutores/{id}', [TutorController::class, 'show']);
-Route::get('/tutores/{id}/edit', [TutorController::class, 'edit']);
-Route::put('/tutores/{id}', [TutorController::class, 'update']);
-Route::delete('/tutores/{id}', [TutorController::class, 'destroy']);
+Route::get('/tutores', [TutorController::class, 'index'])->name('tutor.index');
+Route::get('/tutores/create', [TutorController::class, 'create'])->name('tutor.create');
+Route::post('/tutores', [TutorController::class, 'store'])->name('tutor.store');
+Route::get('/tutores/{id}', [TutorController::class, 'show'])->name('tutor.show');
+Route::get('/tutores/{id}/edit', [TutorController::class, 'edit'])->name('tutor.edit');
+Route::patch('/tutores/{id}', [TutorController::class, 'update'])->name('tutor.update');
+Route::delete('/tutores/{id}', [TutorController::class, 'destroy'])->name('tutor.destroy');
 
 
 require __DIR__.'/auth.php';

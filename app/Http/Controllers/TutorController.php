@@ -67,7 +67,7 @@ class TutorController extends Controller
     {
         $validatedData = $request->validate([
             'nome' => 'required|string|max:255',
-            'email' => 'required|email|max:50|unique:tutors',
+            'email' => 'required|email|max:50|unique:tutors,email,'.$id,
             'endereco' => 'string|max:255|nullable',
             'telefone' => 'numeric|min_digits:11|max_digits:12',
         ]);
