@@ -1,0 +1,49 @@
+<x-app-layout>
+    
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-register leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                
+                <div style="background-color:#94C21C" class="p-6 text-gray-900 dark:text-gray-100">
+                    <form method="GET" action="{{ ('edit') }}" class="mt-6 space-y-6">
+                    <table>
+                        <tr>
+                            <td><img src="{{ asset('images/voltar.png') }}" onClick="submit()" style="width:20px;height:20px;cursor:hand;" alt="Voltar"></td>
+                            <td><img src="{{ asset('images/editar.png') }}" onClick="submit()" style="width:20px;height:20px;cursor:hand;" alt="Editar"></td>
+                        </tr>
+                    </table>
+                    <!-- Nome -->
+                    <div>
+                        <x-input-label class="text-register" for="nome" :value="__('Nome')" />
+                        <x-input-label class="text-register" style="color:black" for="nome" :value=" $tutor->nome " />
+                    </div>
+
+                    <!-- E-mail -->
+                    <div>
+                        <x-input-label class="text-register" for="email" :value="__('E-mail')" />
+                        <x-input-label class="text-register" style="color:black" for="email" :value="$tutor->email" />
+                    </div>
+
+                    <!-- Endereço -->
+                    <div>
+                        <x-input-label class="text-register" for="endereco" :value="__('Endereço')" />
+                        <x-input-label class="text-register" style="color:black" for="endereco" :value="$tutor->endereco" />
+                    </div>
+
+                    <!-- Telefone -->
+                    <div>
+                        <x-input-label class="text-register" for="telefone" :value="__('Telefone')" />
+                        <x-input-label class="text-register" style="color:black" for="telefone" :value="$tutor->telefone" />
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</x-app-layout>
