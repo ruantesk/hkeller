@@ -32,9 +32,9 @@ class TutorController extends Controller
     {
         $validatedData = $request->validate([
             'nome' => 'required|string|max:255',
-            'email' => 'required|email|max:50|unique:tutors',
+            'email' => 'required|email:rfc,dns|max:50|unique:tutors',
             'endereco' => 'string|max:255|nullable',
-            'telefone' => 'numeric|min_digits:11|max_digits:12',
+            'telefone' => 'numeric|min_digits:10|max_digits:11',
         ]);
 
         Tutor::create($validatedData);
@@ -68,9 +68,9 @@ class TutorController extends Controller
     {
         $validatedData = $request->validate([
             'nome' => 'required|string|max:255',
-            'email' => 'required|email|max:50|unique:tutors,email,'.$id,
+            'email' => 'required|email:rfc,dns|max:50|unique:tutors,email,'.$id,
             'endereco' => 'string|max:255|nullable',
-            'telefone' => 'numeric|min_digits:11|max_digits:12',
+            'telefone' => 'numeric|min_digits:10|max_digits:11',
         ]);
 
         Tutor::whereId($id)->update($validatedData);
