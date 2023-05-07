@@ -15,6 +15,8 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "cross-env": "^7.0.3"
+        "cross-env": "^7.0.3",
+        "jquery": "^3.6.4",
+        "jquery-mask-plugin": "^1.14.16"
     }
 }
