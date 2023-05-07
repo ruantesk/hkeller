@@ -3,10 +3,10 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
 
-                <div style="background-color:#94C21C" class="p-6 text-gray-600 dark:text-gray-100">
+                <div style="background-color:#5e7c12" class="p-6 text-gray-600 dark:text-gray-100">
                     <form method="POST" action="{{ route('tutor.store') }}" class="mt-6 space-y-6">
                     @csrf
-                    <div style="background-color:#94C21C;max-width:50%;" class="p-6 text-gray-400 dark:text-gray-100">
+                    <div style="background-color:#5e7c12;max-width:50%;" class="p-6 text-gray-400 dark:text-gray-100">
                     <a href="{{route('tutor.index')}}"><img src="{{ asset('images/voltar.png') }}" style="width:20px;height:20px;" alt="Voltar"></a>
                     <!-- Nome -->
                     <div>

@@ -20,7 +20,7 @@
               text-align: center;
               min-height: 500px;
               min-width: 612px;
-              background-color: #94C21C;
+              background-color: #5e7c12;
               top: 10%;
             }
             .background {

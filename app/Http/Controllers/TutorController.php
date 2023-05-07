@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Tutor; 
+use App\Models\Tutor;
 
 class TutorController extends Controller
 {
@@ -12,7 +12,8 @@ class TutorController extends Controller
      */
     public function index()
     {
-        $tutores = Tutor::all();
+        // $tutores = Tutor::all();
+        $tutores = Tutor::paginate(10);
         return view('tutor.index', ['tutores' => $tutores]);
     }
 

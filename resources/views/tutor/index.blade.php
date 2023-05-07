@@ -2,10 +2,10 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div style="background-color:#94C21C" class="p-6 text-gray-900 dark:text-gray-100">
+                <div style="background-color:#5e7c12" class="p-6 text-gray-900 dark:text-gray-100">
                     <table class="w-full">
                         <thead>
-                            <tr style="text-align: left;color:#000000">
+                            <tr style="text-align: left;">
                                 <th class="pb-4">Nome</th>
                                 <th class="pb-4">E-mail</th>
                                 <th class="pb-4">Endereço</th>
@@ -39,6 +39,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                </div>
+                <div style="background-color:#5e7c12" class="p-6 pb-2 text-gray-900 dark:text-gray-100">
+                    {{ $tutores->links() }}
                 </div>
             </div>
         </div>
