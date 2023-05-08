@@ -1,11 +1,4 @@
 <x-app-layout>
-
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-register leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
@@ -21,9 +14,9 @@
                         <x-input-label class="text-register"  for="nome" :value=" $cao->nome " />
                     </div>
 
-                    <!-- Raca -->
+                    <!-- Raça -->
                     <div>
-                        <x-input-label class="text-register" for="raca" :value="__('Raca')" />
+                        <x-input-label class="text-register" for="raca" :value="__('Raça')" />
                         <x-input-label class="text-register"  for="raca" :value="$cao->raca" />
                     </div>
 
@@ -44,6 +37,40 @@
                         <x-input-label class="text-register" for="data_nascimento" :value="__('Data de nascimento')" />
                         <x-input-label class="text-register"  for="data_nascimento" :value="$cao->data_nascimento" />
                     </div>
+
+                    <!-- Eventos -->
+                    <div>
+                        <x-input-label class="text-register" for="eventos" :value="__('Eventos')" />
+                        <div class="pt-4">
+                            <table class="table-auto">
+                                <thead>
+                                    <tr>
+                                        <th class="border-b font-medium p-4 pl-8 pt-0 pb-3 text-left">Id</th>
+                                        <th class="border-b font-medium p-4 pl-8 pt-0 pb-3 text-left">Descricao</th>
+                                        <th class="border-b font-medium p-4 pl-8 pt-0 pb-3 text-left">Data</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border-b border-slate-100 p-4 pl-8">1</td>
+                                        <td class="border-b border-slate-100 p-4 pl-8">Teste do dog</td>
+                                        <td class="border-b border-slate-100 p-4 pl-8">01/05/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border-b border-slate-100 p-4 pl-8">2</td>
+                                        <td class="border-b border-slate-100 p-4 pl-8">Teste do dois</td>
+                                        <td class="border-b border-slate-100 p-4 pl-8">02/05/2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border-b border-slate-100 p-4 pl-8">3</td>
+                                        <td class="border-b border-slate-100 p-4 pl-8">dogtres</td>
+                                        <td class="border-b border-slate-100 p-4 pl-8">03/05/2023</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                     </form>
                 </div>
             </div>

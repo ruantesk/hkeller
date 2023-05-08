@@ -39,7 +39,7 @@ Route::get('/tutores/{id}/edit', [TutorController::class, 'edit'])->name('tutor.
 Route::patch('/tutores/{id}', [TutorController::class, 'update'])->name('tutor.update');
 Route::delete('/tutores/{id}', [TutorController::class, 'destroy'])->name('tutor.destroy');
 
-// Caes
+// Cães
 // Route::resource('cao', 'CaoController');
 Route::get('/caes', [CaoController::class, 'index'])->name('cao.index');
 Route::get('/caes/create', [CaoController::class, 'create'])->name('cao.create');

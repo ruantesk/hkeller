@@ -12,7 +12,7 @@ class TutorController extends Controller
      */
     public function index()
     {
-        // $tutores = Tutor::all();
+        // Tutor::factory(10)->create();
         $tutores = Tutor::paginate(10);
         return view('tutor.index', ['tutores' => $tutores]);
     }

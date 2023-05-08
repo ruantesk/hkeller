@@ -7,7 +7,7 @@
                         <thead>
                             <tr style="text-align: left;">
                                 <th class="pb-4">Nome</th>
-                                <th class="pb-4">Raca</th>
+                                <th class="pb-4">Raça</th>
                                 <th class="pb-4">Cor</th>
                                 <th class="pb-4">Porte</th>
                                 <th class="pb-4">Data de Nascimento</th>

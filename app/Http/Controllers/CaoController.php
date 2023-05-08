@@ -13,6 +13,7 @@ class CaoController extends Controller
      */
     public function index()
     {
+        // Cao::factory(10)->create();
         $caes = Cao::paginate(10);
         return view('cao.index', ['caes' => $caes]);
     }
@@ -43,7 +44,7 @@ class CaoController extends Controller
         Cao::create($validatedData);
 
         return redirect()->route('cao.index')
-            ->with('success', 'Cao criado com sucesso.');
+            ->with('success', 'Cão criado com sucesso.');
     }
 
     /**
@@ -82,7 +83,7 @@ class CaoController extends Controller
         Cao::whereId($id)->update($validatedData);
 
         return redirect()->route('cao.index')
-            ->with('success', 'Cao atualizado com sucesso.');
+            ->with('success', 'Cão atualizado com sucesso.');
     }
 
     /**
@@ -94,6 +95,6 @@ class CaoController extends Controller
         $cao->delete();
 
         return redirect()->route('cao.index')
-            ->with('success', 'Cao deletado com sucesso.');
+            ->with('success', 'Cão deletado com sucesso.');
     }
 }

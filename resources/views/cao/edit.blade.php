@@ -17,9 +17,9 @@
                             <x-input-error :messages="$errors->get('nome')" class="mt-2" />
                         </div>
 
-                        <!-- Raca -->
+                        <!-- Raça -->
                         <div>
-                            <x-input-label class="text-register" for="raca" :value="__('Raca')" />
+                            <x-input-label class="text-register" for="raca" :value="__('Raça')" />
                             <x-text-input id="raca" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="raca" name="raca" :value="$cao->raca" required autofocus />
                             <x-input-error :messages="$errors->get('raca')" class="mt-2" />
                         </div>
