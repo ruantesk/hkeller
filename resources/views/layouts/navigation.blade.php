@@ -27,6 +27,12 @@
                         {{ __('Tutores') }}
                     </x-nav-link>
                 </div>
+
+                <div class="hidden text-register space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('cao.index')" :active="request()->routeIs('cao.index')">
+                        {{ __('Cães') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
@@ -84,6 +90,10 @@
 
             <x-responsive-nav-link :href="route('tutor.index')" :active="request()->routeIs('tutor.index')">
                 {{ __('Tutores') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('cao.index')" :active="request()->routeIs('cao.index')">
+                {{ __('Cães') }}
             </x-responsive-nav-link>
         </div>
 
