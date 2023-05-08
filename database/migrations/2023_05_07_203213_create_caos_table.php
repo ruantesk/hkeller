@@ -11,8 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('tutors', function (Blueprint $table) {
+        Schema::create('caos', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
             $table->softDeletes();
+
+            $table->string('nome');
+            $table->string('raca');
+            $table->string('cor');
+            $table->string('porte');
+            $table->date('data_nascimento');
         });
     }
 
@@ -21,8 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('tutors', function (Blueprint $table) {
-            $table->dropSoftDeletes();
-        });
+        Schema::dropIfExists('caos');
     }
 };

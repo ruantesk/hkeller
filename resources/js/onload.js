@@ -9,6 +9,8 @@ $(function() {
 
     // Mascaras
     $(".telefone").mask("(99) 99999-9999");
+    $(".date").mask("00/00/0000");
+
 
     $('form').on('submit', function() {
         $('input.telefone').each(function() {

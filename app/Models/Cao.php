@@ -7,15 +7,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\BaseModel;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Tutor extends BaseModel
+class Cao extends BaseModel
 {
     use HasFactory;
     use SoftDeletes;
 
+    protected $dates = ['data_nascimento'];
+
     protected $fillable = [
         'nome',
-        'email',
-        'endereco',
-        'telefone',
+        'raca',
+        'cor',
+        'porte',
+        'data_nascimento',
     ];
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TutorController;
+use App\Http\Controllers\CaoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,5 +39,14 @@ Route::get('/tutores/{id}/edit', [TutorController::class, 'edit'])->name('tutor.
 Route::patch('/tutores/{id}', [TutorController::class, 'update'])->name('tutor.update');
 Route::delete('/tutores/{id}', [TutorController::class, 'destroy'])->name('tutor.destroy');
 
+// Caes
+// Route::resource('cao', 'CaoController');
+Route::get('/caes', [CaoController::class, 'index'])->name('cao.index');
+Route::get('/caes/create', [CaoController::class, 'create'])->name('cao.create');
+Route::post('/caes', [CaoController::class, 'store'])->name('cao.store');
+Route::get('/caes/{id}', [CaoController::class, 'show'])->name('cao.show');
+Route::get('/caes/{id}/edit', [CaoController::class, 'edit'])->name('cao.edit');
+Route::patch('/caes/{id}', [CaoController::class, 'update'])->name('cao.update');
+Route::delete('/caes/{id}', [CaoController::class, 'destroy'])->name('cao.destroy');
 
 require __DIR__.'/auth.php';
