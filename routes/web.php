@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TutorController;
 use App\Http\Controllers\CaoController;
+use App\Http\Controllers\EventoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,5 +49,14 @@ Route::get('/caes/{id}', [CaoController::class, 'show'])->name('cao.show');
 Route::get('/caes/{id}/edit', [CaoController::class, 'edit'])->name('cao.edit');
 Route::patch('/caes/{id}', [CaoController::class, 'update'])->name('cao.update');
 Route::delete('/caes/{id}', [CaoController::class, 'destroy'])->name('cao.destroy');
+
+// Eventos
+Route::get('/eventos', [EventoController::class, 'index'])->name('evento.index');
+Route::get('/eventos/create', [EventoController::class, 'create'])->name('evento.create');
+Route::post('/eventos', [EventoController::class, 'store'])->name('evento.store');
+Route::get('/eventos/{id}', [EventoController::class, 'show'])->name('evento.show');
+Route::get('/eventos/{id}/edit', [EventoController::class, 'edit'])->name('evento.edit');
+Route::patch('/eventos/{id}', [EventoController::class, 'update'])->name('evento.update');
+Route::delete('/eventos/{id}', [EventoController::class, 'destroy'])->name('evento.destroy');
 
 require __DIR__.'/auth.php';

@@ -19,6 +19,7 @@ class BaseModel extends Model
         'created_at',
         'updated_at',
         'data_nascimento',
+        'data_evento',
         // add any other date attributes here
     ];
 

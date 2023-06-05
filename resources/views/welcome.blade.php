@@ -35,6 +35,8 @@
 
             .acess {
                 text-align: right;
+                display: flex;
+                justify-content: end;
             }
 
             .text-login {
@@ -64,10 +66,10 @@
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-login sm:rounded-lg">Dashboard</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-login sm:rounded-lg">Entrar</a>
+                        <a href="{{ route('login') }}" class="text-login sm:rounded-lg mr-2">Entrar</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="text-login sm:rounded-lg">Cadastrar</a>
+                            <a href="{{ route('register') }}" class="text-login sm:rounded-lg ml-2">Cadastrar</a>
                         @endif
                     @endauth
                     </div>

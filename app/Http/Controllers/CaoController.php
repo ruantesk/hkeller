@@ -37,6 +37,9 @@ class CaoController extends Controller
             'cor' => 'required|string|max:20',
             'porte' => 'required|string|max:20',
             'data_nascimento' => 'required|date_format:d/m/Y|before_or_equal:now',
+            'sexo' => 'string|max:1',
+            'pai_id' => 'required|exists:caos,id',
+            'mae_id' => 'required|exists:caos,id',
         ]);
 
         $validatedData['data_nascimento'] = Carbon::createFromFormat('d/m/Y', $validatedData['data_nascimento'])->format('Y-m-d');
@@ -53,7 +56,9 @@ class CaoController extends Controller
     public function show(string $id)
     {
         $cao = Cao::findOrFail($id);
-        return view('cao.show', compact('cao'));
+
+        $eventos = $cao->eventos()->get();
+        return view('cao.show', compact('cao', 'eventos'));
     }
 
     /**
@@ -76,6 +81,9 @@ class CaoController extends Controller
             'cor' => 'required|string|max:20',
             'porte' => 'required|string|max:20',
             'data_nascimento' => 'required|date_format:d/m/Y|before_or_equal:now',
+            'sexo' => 'string|max:1',
+            'pai_id' => 'required|exists:caos,id',
+            'mae_id' => 'required|exists:caos,id',
         ]);
 
         $validatedData['data_nascimento'] = Carbon::createFromFormat('d/m/Y', $validatedData['data_nascimento'])->format('Y-m-d');
