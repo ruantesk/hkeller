@@ -28,4 +28,14 @@ class Cao extends BaseModel
     {
         return $this->hasMany(Evento::class);
     }
+
+    public function pai()
+    {
+        return $this->hasOne(Cao::class, 'pai_id');
+    }
+
+    public function mae()
+    {
+        return $this->hasOne(Cao::class, 'mae_id');
+    }
 }

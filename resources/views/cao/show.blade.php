@@ -94,6 +94,18 @@
                             <x-input-label class="text-register"  for="data_nascimento" :value="$cao->data_nascimento" />
                         </div>
 
+                        <!-- Pai -->
+                        <div>
+                            <x-input-label class="text-register" for="pai" :value="__('Pai')" />
+                            <x-input-label class="text-register" for="pai" :value="$caoPai ? $caoPai->nome : 'N/A'" />
+                        </div>
+
+                        <!-- Mãe -->
+                        <div>
+                            <x-input-label class="text-register" for="mae" :value="__('Mãe')" />
+                            <x-input-label class="text-register" for="mae" :value="$caoMae ? $caoMae->nome : 'N/A'" />
+                        </div>
+
                         <!-- Eventos -->
                         <div>
                             {{-- <div class="block"> --}}

@@ -23,7 +23,9 @@ class CaoController extends Controller
      */
     public function create()
     {
-        return view('cao.create');
+        $caosM = Cao::where('sexo', 'M')->paginate(10);
+        $caosF = Cao::where('sexo', 'F')->paginate(10);
+        return view('cao.create', compact('caosM', 'caosF'));
     }
 
     /**
@@ -31,16 +33,24 @@ class CaoController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
+        $rules = [
             'nome' => 'required|string|max:255',
             'raca' => 'required|string|max:50',
             'cor' => 'required|string|max:20',
             'porte' => 'required|string|max:20',
             'data_nascimento' => 'required|date_format:d/m/Y|before_or_equal:now',
             'sexo' => 'string|max:1',
-            'pai_id' => 'required|exists:caos,id',
-            'mae_id' => 'required|exists:caos,id',
-        ]);
+        ];
+
+        if (!empty($request->pai_id)) {
+            $rules['pai_id'] = 'exists:caos,id';
+        }
+
+        if (!empty($request->mae_id)) {
+            $rules['mae_id'] = 'exists:caos,id';
+        }
+
+        $validatedData = $request->validate($rules);
 
         $validatedData['data_nascimento'] = Carbon::createFromFormat('d/m/Y', $validatedData['data_nascimento'])->format('Y-m-d');
 
@@ -56,9 +66,11 @@ class CaoController extends Controller
     public function show(string $id)
     {
         $cao = Cao::findOrFail($id);
+        $caoMae = $cao->mae()->first();
+        $caoPai = $cao->pai()->first();
 
         $eventos = $cao->eventos()->get();
-        return view('cao.show', compact('cao', 'eventos'));
+        return view('cao.show', compact('cao', 'caoMae', 'caoPai', 'eventos'));
     }
 
     /**
@@ -75,16 +87,24 @@ class CaoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $validatedData = $request->validate([
+        $rules = [
             'nome' => 'required|string|max:255',
             'raca' => 'required|string|max:50',
             'cor' => 'required|string|max:20',
             'porte' => 'required|string|max:20',
             'data_nascimento' => 'required|date_format:d/m/Y|before_or_equal:now',
             'sexo' => 'string|max:1',
-            'pai_id' => 'required|exists:caos,id',
-            'mae_id' => 'required|exists:caos,id',
-        ]);
+        ];
+
+        if (!empty($request->pai_id)) {
+            $rules['pai_id'] = 'exists:caos,id';
+        }
+
+        if (!empty($request->mae_id)) {
+            $rules['mae_id'] = 'exists:caos,id';
+        }
+
+        $validatedData = $request->validate($rules);
 
         $validatedData['data_nascimento'] = Carbon::createFromFormat('d/m/Y', $validatedData['data_nascimento'])->format('Y-m-d');
 
