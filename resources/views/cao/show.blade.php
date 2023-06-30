@@ -144,7 +144,7 @@
                                 <h2>Evento</h2>
 
                                 <div>
-                                    <x-input-label class="text-register" for="data_evento" :value="__('Data de nascimento')" />
+                                    <x-input-label class="text-register" for="data_evento" :value="__('Data do evento')" />
                                     <x-text-input class="label date" id="data_evento" type="text" name="data_evento" :value="old('data_evento')" required autofocus />
                                     <x-input-error :messages="$errors->get('data_evento')" class="mt-2" />
                                 </div>
