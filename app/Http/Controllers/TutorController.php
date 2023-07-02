@@ -13,7 +13,8 @@ class TutorController extends Controller
     public function index()
     {
         // Tutor::factory(10)->create();
-        $tutores = Tutor::paginate(10);
+        $tutores = Tutor::orderBy('nome', 'asc')
+        ->paginate(10);
         return view('tutor.index', ['tutores' => $tutores]);
     }
 

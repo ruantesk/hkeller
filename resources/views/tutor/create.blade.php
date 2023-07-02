@@ -11,7 +11,7 @@
                     <!-- Nome -->
                     <div>
                         <x-input-label class="text-register" for="nome" :value="__('Nome')" />
-                        <x-text-input id="nome" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="nome" name="nome" :value="old('nome')" required autofocus />
+                        <x-text-input id="nome" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="text" name="nome" :value="old('nome')" required autofocus />
                         <x-input-error :messages="$errors->get('nome')" class="mt-2" />
                     </div>
 
@@ -25,14 +25,14 @@
                     <!-- Endereço -->
                     <div>
                         <x-input-label class="text-register" for="endereco" :value="__('Endereço')" />
-                        <x-text-input id="endereco" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="endereco" name="endereco" :value="old('endereco')" required autofocus />
+                        <x-text-input id="endereco" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="text" name="endereco" :value="old('endereco')" required autofocus />
                         <x-input-error :messages="$errors->get('endereco')" class="mt-2" />
                     </div>
 
                     <!-- Telefone -->
                     <div>
                         <x-input-label class="text-register" for="telefone" :value="__('Telefone')" />
-                        <x-text-input id="telefone" class="telefone border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="telefone" name="telefone" :value="old('telefone')" required autofocus />
+                        <x-text-input id="telefone" class="telefone border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="text" name="telefone" :value="old('telefone')" required autofocus />
                         <x-input-error :messages="$errors->get('telefone')" class="mt-2" />
                     </div>
                     <BR>

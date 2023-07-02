@@ -14,7 +14,7 @@ class CaoController extends Controller
     public function index()
     {
         // Cao::factory(10)->create();
-        $caes = Cao::paginate(10);
+        $caes = Cao::orderBy('nome', 'asc')->paginate(10);
         return view('cao.index', ['caes' => $caes]);
     }
 

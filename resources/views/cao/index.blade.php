@@ -45,6 +45,12 @@
                 <div style="background-color:#5e7c12" class="p-6 pb-2 text-gray-900 dark:text-gray-100">
                     {{ $caes->links() }}
                 </div>
+                
+                @if (session('success'))
+                <div class="alert alert-success" style="color:green;">
+                    {{ session('success') }}
+                </div>
+                @endif
             </div>
         </div>
     </div>

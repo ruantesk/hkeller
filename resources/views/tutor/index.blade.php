@@ -20,22 +20,22 @@
                         </thead>
                         <tbody>
                             @foreach($tutores as $tutor)
-                                <tr style="text-align: left;">
-                                    <td><a href="{{ route('tutor.show', $tutor->id) }}">{{ $tutor->nome }}</a></td>
-                                    <td>{{ $tutor->email }}</td>
-                                    <td>{{ $tutor->endereco }}</td>
-                                    <td class="telefone">{{ $tutor->telefone }}</td>
-                                    <td><form action="{{ route('tutor.edit', $tutor->id) }}" method="GET">
-                                        @csrf
-                                        @method('GET')
-                                        <button type="submit">Editar</button>
-                                    </form></td>
-                                    <td><form action="{{ route('tutor.destroy', $tutor->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button class="button-delete" type="submit">Excluir</button>
-                                    </form></td>
-                                </tr>
+                            <tr style="text-align: left;">
+                                <td><a href="{{ route('tutor.show', $tutor->id) }}">{{ $tutor->nome }}</a></td>
+                                <td>{{ $tutor->email }}</td>
+                                <td>{{ $tutor->endereco }}</td>
+                                <td class="telefone">{{ $tutor->telefone }}</td>
+                                <td><form action="{{ route('tutor.edit', $tutor->id) }}" method="GET">
+                                    @csrf
+                                    @method('GET')
+                                    <button type="submit">Editar</button>
+                                </form></td>
+                                <td><form action="{{ route('tutor.destroy', $tutor->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="button-delete" type="submit">Excluir</button>
+                                </form></td>
+                            </tr>
                             @endforeach
                         </tbody>
                     </table>
@@ -43,6 +43,12 @@
                 <div style="background-color:#5e7c12" class="p-6 pb-2 text-gray-900 dark:text-gray-100">
                     {{ $tutores->links() }}
                 </div>
+                
+                @if (session('success'))
+                <div class="alert alert-success" style="color:green;">
+                    {{ session('success') }}
+                </div>
+                @endif
             </div>
         </div>
     </div>

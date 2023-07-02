@@ -13,35 +13,35 @@
                         <!-- Nome -->
                         <div>
                             <x-input-label class="text-register" for="nome" :value="__('Nome')" />
-                            <x-text-input id="nome" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="nome" name="nome" :value="$cao->nome" required autofocus />
+                            <x-text-input id="nome" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="text" name="nome" :value="$cao->nome" required autofocus />
                             <x-input-error :messages="$errors->get('nome')" class="mt-2" />
                         </div>
 
                         <!-- Raça -->
                         <div>
                             <x-input-label class="text-register" for="raca" :value="__('Raça')" />
-                            <x-text-input id="raca" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="raca" name="raca" :value="$cao->raca" required autofocus />
+                            <x-text-input id="raca" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="text" name="raca" :value="$cao->raca" required autofocus />
                             <x-input-error :messages="$errors->get('raca')" class="mt-2" />
                         </div>
 
                         <!-- Cor -->
                         <div>
                             <x-input-label class="text-register" for="cor" :value="__('Cor')" />
-                            <x-text-input id="cor" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="cor" name="cor" :value="$cao->cor" required autofocus />
+                            <x-text-input id="cor" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="text" name="cor" :value="$cao->cor" required autofocus />
                             <x-input-error :messages="$errors->get('cor')" class="mt-2" />
                         </div>
 
                         <!-- Porte -->
                         <div>
                             <x-input-label class="text-register" for="porte" :value="__('Porte')" />
-                            <x-text-input id="porte" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="porte" name="porte" :value="$cao->porte" required autofocus />
+                            <x-text-input id="porte" class="border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="text" name="porte" :value="$cao->porte" required autofocus />
                             <x-input-error :messages="$errors->get('porte')" class="mt-2" />
                         </div>
 
                         <!-- Data de nascimento -->
                         <div>
                             <x-input-label class="text-register" for="data_nascimento" :value="__('Data de nascimento')" />
-                            <x-text-input id="data_nascimento" class="date border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="data_nascimento" name="data_nascimento" :value="$cao->data_nascimento" required autofocus />
+                            <x-text-input id="data_nascimento" class="date border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm mt-1 block w-full" type="text" name="data_nascimento" :value="$cao->data_nascimento" required autofocus />
                             <x-input-error :messages="$errors->get('data_nascimento')" class="mt-2" />
                         </div>
 

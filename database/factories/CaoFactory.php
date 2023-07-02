@@ -22,6 +22,7 @@ class CaoFactory extends Factory
             'cor' => fake()->word(),
             'porte' => fake()->word(),
             'data_nascimento' => fake()->date(),
+            'sexo' => fake()->randomElement(['m', 'f']), 
         ];
     }
 }
